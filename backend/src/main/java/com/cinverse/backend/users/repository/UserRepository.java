@@ -1,4 +1,9 @@
 package com.cinverse.backend.users.repository;
+import com.cinverse.backend.users.entity.UserEntity;
+import org.springframework.data.mongodb.repository.MongoRepository;
 
-public class UserRepository {
+import java.util.Optional;
+
+public interface UserRepository extends MongoRepository<UserEntity, String> {
+    Optional<UserEntity> findByEmail(String email);
 }
