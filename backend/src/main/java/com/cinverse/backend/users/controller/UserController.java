@@ -12,12 +12,6 @@ public class UserController {
     @Autowired
     private UserRepository userRepository;
 
-    // Create a new user
-    @PostMapping
-    public UserEntity createUser(@RequestBody UserEntity user) {
-        return userRepository.save(user);
-    }
-
     // Get all users
     @GetMapping
     public List<UserEntity> getAllUsers() {
